@@ -281,7 +281,7 @@ nav ul li a {
     background-image: url('https://i.pinimg.com/736x/c4/78/9c/c4789c05f20a77325d39ba3f115ee5a0.jpg');
 }
 
-.box1, .box2,
+/*.box1, .box2,
 .box3 {
     margin: 20px;
     height: 25rem;
@@ -309,7 +309,36 @@ nav ul li a {
     margin: 350px 0 0 0;
     font-family: "Mali", cursive;
     font-weight: 900;
+}*/
+.box1, .box2, .box3 {
+    margin: 20px;
+    width: calc(30% - 40px);  /* ขนาด 30% ของหน้าจอ แต่ไม่เกินขอบ */
+    max-width: 300px;         /* ขนาดสูงสุด */
+    height: auto;
+    aspect-ratio: 4 / 5;      /* รักษาอัตราส่วน 4:5 */
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 0 1rem 0.9rem rgba(0, 0, 0, 0.1);
 }
+
+.box1:hover, .box2:hover, .box3:hover {
+    border-radius: 25px;
+    transition: 0.4s;
+    transform: translateY(-3px);
+    box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
+}
+
+.box1 h2, .box2 h2, .box3 h2 {
+    background: linear-gradient(40deg, #53ff98, #5aadff, #5f41f5);
+    border-radius: 0 0 25px 25px;
+    padding: 10px 0 20px 0;
+    margin: 0;  /* ยกเลิก margin ด้านบนที่ทำให้กล่องดูแบน */
+    font-family: "Mali", cursive;
+    font-weight: 900;
+}
+
 
 .about-btn {
     margin-top: 30px;
@@ -669,8 +698,9 @@ footer {
     .box4, .box5, .box6,
     .box7, .box8, .box9,
     .box10, .box11, .box12 {
-        width: calc(50% - 40px);  /* ให้กล่องกว้างครึ่งหนึ่งของหน้าจอ */
-        height: auto;
+        width: calc(45% - 20px);  /* 2 กล่องต่อแถว */
+        max-width: 250px;
+        aspect-ratio: 4 / 5;
     }
 }
 
@@ -704,8 +734,8 @@ footer {
     .box4, .box5, .box6,
     .box7, .box8, .box9,
     .box10, .box11, .box12 {
-        width: 80%;
-        height: auto;
+         width: calc(90% - 20px);  /* กล่องเต็มหน้าจอแต่ยังคงขอบ */
+        max-width: 100%;
     }
 
     .about-btn, .cartoon-btn {
@@ -716,6 +746,13 @@ footer {
 
 /* หน้าจอขนาดเล็กมาก (โทรศัพท์แนวตั้ง) */
 @media (max-width: 480px) {
+    .box1, .box2, .box3 {
+        width: 100%;  /* กล่องเต็มจอเมื่อจอเล็กมาก */
+    }
+
+    .box1 h2, .box2 h2, .box3 h2 {
+        font-size: 18px;
+    }
     .header-title h1 {
         font-size: 30px;
     }
