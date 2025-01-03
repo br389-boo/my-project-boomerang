@@ -14,7 +14,39 @@
     --orange:#faa307;
     --selectiveyellow:#ffba08;
 }
-
+.body, html {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 10px;
+        }
+        .box {
+            width: 30%;
+            margin: 10px;
+            padding: 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            font-size: 1.2em;
+            border-radius: 10px;
+        }
+        .footer {
+            width: 100%;
+            padding: 20px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            position: absolute;
+            bottom: 0;
+        }
 * {
     font-family: "Fredoka", sans-serif;
     font-optical-sizing: auto;
@@ -734,6 +766,7 @@ footer {
     .box10, .box11, .box12 {
          width: calc(90% - 20px);  /* กล่องเต็มหน้าจอแต่ยังคงขอบ */
         max-width: 100%;
+        font-size: 1em;
     }
 
     .about-btn, .cartoon-btn {
@@ -746,6 +779,7 @@ footer {
 @media (max-width: 480px) {
     .box1, .box2, .box3 {
         width: 100%;  /* กล่องเต็มจอเมื่อจอเล็กมาก */
+        font-size: 0.8em;
     }
 
     .box1 h2, .box2 h2, .box3 h2 {
