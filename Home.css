@@ -707,9 +707,74 @@ footer {
     }
     
 }
-/* --- Responsive Design สำหรับทุกหน้าจอ --- */
+/* สำหรับเดสก์ท็อป (หน้าจอใหญ่กว่า 1024px) */
+@media (min-width: 1024px) {
+    .container {
+        margin: 0 auto;
+        max-width: 1200px;
+    }
 
-/* ขนาดหน้าจอสำหรับแท็บเล็ต (ไอแพดแนวตั้งและแนวนอน) */
+    nav ul {
+        justify-content: space-between;
+    }
+
+    .header-title h1 {
+        font-size: 120px;
+    }
+}
+
+/* สำหรับแท็บเล็ต (768px ถึง 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .container {
+        margin: 0 20px;
+    }
+
+    .header-title h1 {
+        font-size: 80px;
+    }
+
+    .box1, .box2, .box3 {
+        width: calc(50% - 20px);
+    }
+
+    .container-about {
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+}
+
+/* สำหรับสมาร์ทโฟน (หน้าจอเล็กกว่า 768px) */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-title h1 {
+        font-size: 60px;
+        text-align: center;
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .box1, .box2, .box3 {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .about-title {
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .about-text {
+        font-size: 16px;
+    }
+}
+
+/* ขนาดหน้าจอสำหรับแท็บเล็ต (ไอแพดแนวตั้งและแนวนอน) 
 @media (max-width: 1024px) {
     .container {
         width: 90%;
@@ -732,13 +797,14 @@ footer {
         max-width: 250px;
         aspect-ratio: 4 / 5;
     }
-}
+}*/
 
 /* ขนาดหน้าจอสำหรับโทรศัพท์มือถือ */
 @media (max-width: 768px) {
     nav ul {
         flex-direction: column;
         align-items: center;
+        text-align: center;
     }
 
     nav ul li {
@@ -760,18 +826,17 @@ footer {
         font-size: 30px;
     }
 
-    .box1, .box2, .box3,
-    .box4, .box5, .box6,
-    .box7, .box8, .box9,
-    .box10, .box11, .box12 {
-         width: calc(90% - 20px);  /* กล่องเต็มหน้าจอแต่ยังคงขอบ */
-        max-width: 100%;
-        font-size: 1em;
+    .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12 {
+        height: auto; /* ใช้ auto ให้เหมาะกับเนื้อหา */
+        width: 90%; /* ยืดขนาดเต็มที่ของหน้าจอ */
     }
 
     .about-btn, .cartoon-btn {
         padding: 10px;
         text-align: center;
+    }
+    .nav-footer ul {
+        flex-direction: column;
     }
 }
 
@@ -795,5 +860,11 @@ footer {
 
     .header-content p {
         font-size: 16px;
+    }
+}
+@media (max-width: 768px) {
+    .box1, .box2, .box3, .box4, .box5, .box6, .box7, .box8, .box9, .box10, .box11, .box12 {
+        height: auto; /* ใช้ auto ให้เหมาะกับเนื้อหา */
+        width: 90%; /* ยืดขนาดเต็มที่ของหน้าจอ */
     }
 }
